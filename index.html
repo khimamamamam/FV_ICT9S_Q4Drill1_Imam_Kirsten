@@ -33,43 +33,48 @@ body::after {
     content: "";
     position: fixed;
     inset: 0;
-    background: rgba(10, 25, 50, 0.5);
+    background: rgba(147, 186, 255, 0.5);
     z-index: -1;
 }
 
 @keyframes slide {
 
     0% {
-        background-image: url("https://i.pinimg.com/1200x/d3/87/a2/d387a25cfcadea95e4ce5c78ac682119.jpg");
+        background-image: url("https://i.pinimg.com/control1/1200x/a8/94/ce/a894ce3a495794776b27269113fb8185.jpg");
         filter: blur(6px) brightness(1);
         transform: scale(1.1) rotate(-2deg);
     }
 
     40% {
-        background-image: url("https://i.pinimg.com/1200x/07/d8/0e/07d80e23bb62a11c678493c484b6d148.jpg");
+        background-image: url("https://i.pinimg.com/736x/56/e2/fc/56e2fcdd33dccce1ea469d166f2ba39e.jpg");
         filter: blur(8px) brightness(1.3);
         transform: scale(1.2) rotate(3deg);
     }
 
     80% {
-        background-image: url("https://i.pinimg.com/1200x/97/4d/cf/974dcf4589bd4648d8cca04be51cc78d.jpg");
+        background-image: url("https://i.pinimg.com/control1/1200x/d2/1b/23/d21b23972fa99159a0a5a8e1c9ab090c.jpg");
         filter: blur(7px) brightness(1.2);
         transform: scale(1.15) rotate(-3deg);
     }
 
     100% {
-        background-image: url("https://i.pinimg.com/1200x/c8/a8/ed/c8a8ed8b3f0ab970a8db5f2f56b6c9e1.jpg");
+        background-image: url("https://i.pinimg.com/736x/36/16/e8/3616e8af7623fe3a58cffe76b52ce5a4.jpg");
         filter: blur(6px) brightness(1);
         transform: scale(1.1) rotate(0deg);
     }
 }
 
 .container-box{
-    background:white;
-    padding:30px;
-    border-radius:10px;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
-    margin-top:50px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+
+    margin-top: 50px;
+    color: white;
 }
 
 .classification-table{
@@ -87,7 +92,7 @@ body::after {
 
 <div class="container container-box">
 
-<h1 class="text-center">Electricity Consumption Classifier</h1>
+<h3 class="text-center mx-auto">Consumption Classification Table</h3>
 
 <p class="text-center">
 Enter your electricity usage in <b>kWh</b> to determine your consumption category.
@@ -98,11 +103,13 @@ This simple program uses <b>JavaScript conditional statements</b> to classify el
 <hr>
 <br>
 
-<h3>Enter Electricity Usage</h3>
+<h3 class="text-center">Enter Electricity Usage</h3>
 
-<input type="text" id="kwhInput" class="form-control mb-3" placeholder="Enter electricity usage in kWh">
+<div class="text-center">
+<input type="text" id="kwhInput" class="form-control mb-3 mx-auto" placeholder="Enter electricity usage in kWh">
 
 <button class="btn btn-warning" onclick="classifyConsumption()">Consumption Classification</button>
+</div>
 
 <br><br>
 
@@ -111,7 +118,7 @@ This simple program uses <b>JavaScript conditional statements</b> to classify el
 <hr>
 <br>
 
-<h3>Consumption Classification Table</h3>
+<h3 class="text-center">Consumption Classification Table</h3>
 
 <table class="table table-bordered classification-table">
 <thead class="table-dark">
