@@ -65,24 +65,69 @@ body::after {
 }
 
 .container-box{
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
+    background: rgba(180, 220, 255, 0.18);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     padding: 30px;
-    border-radius: 15px;
-    border: 1px solid rgba(255,255,255,0.3);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.25);
-
+    border-radius: 18px;
+    border: 1px solid rgba(255,255,255,0.35);
+    box-shadow:
+        0 8px 32px rgba(0,40,90,0.4),
+        inset 0 0 25px rgba(255,255,255,0.15);
     margin-top: 50px;
     color: white;
+}
+
+h3, h1{
+    color:#c8ecff;
+    text-shadow:0 0 10px rgba(120,220,255,0.8);
 }
 
 .classification-table{
     margin-top:20px;
 }
 
+table{
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(8px);
+    color:white;
+}
+
+.table-dark{
+    background:linear-gradient(90deg,#004e92,#000428);
+}
+
 #kwhInput{
     width:280px;
+    background: rgba(255,255,255,0.25);
+    border:1px solid rgba(255,255,255,0.5);
+    color:white;
+}
+
+#kwhInput::placeholder{
+    color:rgba(255,255,255,0.7);
+}
+
+.ocean-btn{
+    background: linear-gradient(135deg,#00c6ff,#0072ff);
+    border:none;
+    color:white;
+    font-weight:bold;
+    padding:10px 20px;
+    border-radius:10px;
+
+    box-shadow:0 0 15px rgba(0,170,255,0.8);
+    transition:0.3s;
+}
+
+.ocean-btn:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 25px rgba(0,200,255,1);
+}
+
+#result{
+    color:#b9f3ff;
+    text-shadow:0 0 8px rgba(0,200,255,0.8);
 }
 </style>
 
@@ -108,12 +153,12 @@ This simple program uses <b>JavaScript conditional statements</b> to classify el
 <div class="text-center">
 <input type="text" id="kwhInput" class="form-control mb-3 mx-auto" placeholder="Enter electricity usage in kWh">
 
-<button class="btn btn-warning" onclick="classifyConsumption()">Consumption Classification</button>
+<button class="btn ocean-btn" onclick="classifyConsumption()">Consumption Classification</button>
 </div>
 
 <br><br>
 
-<h4 id="result"></h4>
+<h4 id="result" class="text-center"></h4>
 
 <hr>
 <br>
